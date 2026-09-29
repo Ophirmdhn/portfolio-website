@@ -2,7 +2,7 @@ export interface Project {
     id: number
     slug: string
     title: string
-    category: string
+    // category: string
     shortDescription: string
     description: string
     image: string

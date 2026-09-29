@@ -27,11 +27,7 @@ export default function ProjectCard({
             </div>
 
             <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                    {project.category}
-                </p>
-
-                <h3 className="mt-3 text-xl font-bold tracking-tight text-slate-950">
+                <h3 className="text-xl font-bold tracking-tight text-slate-950">
                     {project.title}
                 </h3>
 

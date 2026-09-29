@@ -125,22 +125,14 @@ export default function Projects() {
                         </div>
                     </article>
                 )}
-
-                {otherProjects.length > 0 && (
-                    <div className="mt-8 grid gap-6 md:grid-cols-2">
-
-                        {otherProjects.map(
-                            (project) => (
-                                <ProjectCard
-                                    key={project.id}
-                                    project={project}
-                                />
-                            ),
-                        )}
-
-                    </div>
-                )}
-
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {otherProjects.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     )
