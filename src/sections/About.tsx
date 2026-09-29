@@ -1,72 +1,100 @@
 import SectionTitle from '../components/ui/SectionTitle'
 
+import { useLanguage } from '../contexts/LanguageContext'
+
 export default function About() {
+    const { t } = useLanguage()
+
     return (
         <section
             id="about"
             className="section-spacing bg-slate-50"
         >
             <div className="section-container">
+
                 <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
 
                     <SectionTitle
-                        label="About Me"
-                        title="Building software that solves real problems."
+                        label={
+                            t.about.label
+                        }
+                        title={
+                            t.about.title
+                        }
                     />
 
                     <div>
+
                         <p className="text-base leading-8 text-slate-600 sm:text-lg">
-                            I'm a developer focused on building
-                            mobile applications, web platforms,
-                            and backend systems. I enjoy turning
-                            ideas and real operational problems
-                            into practical digital solutions.
+                            {
+                                t.about
+                                    .paragraph1
+                            }
                         </p>
 
                         <p className="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-                            Alongside software development, I
-                            also have hands-on experience in IT
-                            support, information systems,
-                            networking, hardware, and technical
-                            troubleshooting.
+                            {
+                                t.about
+                                    .paragraph2
+                            }
                         </p>
 
                         <div className="mt-10 grid gap-6 border-t border-slate-200 pt-8 sm:grid-cols-3">
 
                             <div>
                                 <p className="text-sm text-slate-500">
-                                    Location
+                                    {
+                                        t.about
+                                            .locationLabel
+                                    }
                                 </p>
 
                                 <p className="mt-2 font-semibold text-slate-950">
-                                    Kendari, Indonesia
+                                    {
+                                        t.about
+                                            .location
+                                    }
                                 </p>
                             </div>
 
                             <div>
                                 <p className="text-sm text-slate-500">
-                                    Focus
+                                    {
+                                        t.about
+                                            .focusLabel
+                                    }
                                 </p>
 
                                 <p className="mt-2 font-semibold text-slate-950">
-                                    Fullstack Development
+                                    {
+                                        t.about
+                                            .focus
+                                    }
                                 </p>
                             </div>
 
                             <div>
                                 <p className="text-sm text-slate-500">
-                                    Main Stack
+                                    {
+                                        t.about
+                                            .stackLabel
+                                    }
                                 </p>
 
                                 <p className="mt-2 font-semibold text-slate-950">
-                                    Flutter & React
+                                    {
+                                        t.about
+                                            .stack
+                                    }
                                 </p>
                             </div>
 
                         </div>
+
                     </div>
 
                 </div>
+
             </div>
         </section>
     )

@@ -1,10 +1,14 @@
 import {
-    GitCommit,
-    Inbox,
+    GitBranch,
+    PersonStanding,
     Mail,
 } from 'lucide-react'
 
+import { useLanguage } from '../contexts/LanguageContext'
+
 export default function Contact() {
+    const { t } = useLanguage()
+
     return (
         <section
             id="contact"
@@ -15,17 +19,22 @@ export default function Contact() {
                 <div className="max-w-3xl">
 
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-                        Contact
+                        {
+                            t.contact.label
+                        }
                     </p>
 
                     <h2 className="mt-4 text-4xl font-bold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-                        Let's build something useful together.
+                        {
+                            t.contact.title
+                        }
                     </h2>
 
                     <p className="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
-                        Have a project, collaboration, or
-                        opportunity in mind? Feel free to
-                        reach out.
+                        {
+                            t.contact
+                                .description
+                        }
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-3">
@@ -34,9 +43,13 @@ export default function Contact() {
                             href="mailto:YOUR_EMAIL"
                             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-slate-200"
                         >
-                            <Mail size={17} />
+                            <Mail
+                                size={17}
+                            />
 
-                            Email Me
+                            {
+                                t.contact.email
+                            }
                         </a>
 
                         <a
@@ -46,7 +59,9 @@ export default function Contact() {
                             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition-colors hover:border-slate-500 hover:text-white"
                             aria-label="GitHub"
                         >
-                            <GitCommit size={18} />
+                            <GitBranch
+                                size={18}
+                            />
                         </a>
 
                         <a
@@ -56,7 +71,9 @@ export default function Contact() {
                             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition-colors hover:border-slate-500 hover:text-white"
                             aria-label="LinkedIn"
                         >
-                            <Inbox size={18} />
+                            <PersonStanding
+                                size={18}
+                            />
                         </a>
 
                     </div>

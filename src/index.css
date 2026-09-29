@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Plus Jakarta Sans Variable", sans-serif;
+    --font-sans:
+        "Plus Jakarta Sans Variable",
+        sans-serif;
 }
 
 @layer base {
@@ -32,11 +34,11 @@
     max-width: 80rem;
     padding-inline: 1.25rem;
 
-    @media (width >=40rem) {
+    @media (width >= 40rem) {
         padding-inline: 1.5rem;
     }
 
-    @media (width >=64rem) {
+    @media (width >= 64rem) {
         padding-inline: 2rem;
     }
 }
@@ -44,11 +46,11 @@
 @utility section-spacing {
     padding-block: 5rem;
 
-    @media (width >=48rem) {
+    @media (width >= 48rem) {
         padding-block: 6rem;
     }
 
-    @media (width >=64rem) {
+    @media (width >= 64rem) {
         padding-block: 7rem;
     }
 }

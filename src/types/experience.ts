@@ -1,9 +1,11 @@
+import type { LocalizedText } from './language'
+
 export interface Experience {
     id: number
-    position: string
+    position: LocalizedText
     company: string
     startDate: string
-    endDate: string
-    description: string
-    responsibilities: string[]
+    endDate: LocalizedText
+    description: LocalizedText
+    responsibilities: LocalizedText[]
 }

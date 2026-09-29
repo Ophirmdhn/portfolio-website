@@ -1,8 +1,15 @@
 import SectionTitle from '../components/ui/SectionTitle'
 
+import { useLanguage } from '../contexts/LanguageContext'
+
 import { experiences } from '../data/experiences'
 
 export default function Experience() {
+    const {
+        language,
+        t,
+    } = useLanguage()
+
     return (
         <section
             id="experience"
@@ -11,20 +18,33 @@ export default function Experience() {
             <div className="section-container">
 
                 <SectionTitle
-                    label="Experience"
-                    title="Where I've worked."
-                    description="Professional experience across software development and IT support."
+                    label={
+                        t.experience.label
+                    }
+                    title={
+                        t.experience.title
+                    }
+                    description={
+                        t.experience
+                            .description
+                    }
                 />
 
                 <div className="mt-12 max-w-4xl">
 
                     {experiences.map(
-                        (experience, index) => (
+                        (
+                            experience,
+                            index,
+                        ) => (
                             <article
-                                key={experience.id}
-                                className={`grid gap-5 py-8 md:grid-cols-[180px_1fr] md:gap-10 ${index !== 0
-                                        ? 'border-t border-slate-200'
-                                        : ''
+                                key={
+                                    experience.id
+                                }
+                                className={`grid gap-5 py-8 md:grid-cols-[180px_1fr] md:gap-10 ${index !==
+                                    0
+                                    ? 'border-t border-slate-200'
+                                    : ''
                                     }`}
                             >
 
@@ -35,15 +55,22 @@ export default function Experience() {
                                         }{' '}
                                         —{' '}
                                         {
-                                            experience.endDate
+                                            experience
+                                                .endDate[
+                                            language
+                                            ]
                                         }
                                     </p>
                                 </div>
 
                                 <div>
+
                                     <h3 className="text-xl font-bold text-slate-950">
                                         {
-                                            experience.position
+                                            experience
+                                                .position[
+                                            language
+                                            ]
                                         }
                                     </h3>
 
@@ -55,30 +82,39 @@ export default function Experience() {
 
                                     <p className="mt-5 leading-7 text-slate-600">
                                         {
-                                            experience.description
+                                            experience
+                                                .description[
+                                            language
+                                            ]
                                         }
                                     </p>
 
                                     <ul className="mt-5 space-y-2">
+
                                         {experience.responsibilities.map(
                                             (
                                                 responsibility,
+                                                responsibilityIndex,
                                             ) => (
                                                 <li
                                                     key={
-                                                        responsibility
+                                                        responsibilityIndex
                                                     }
                                                     className="flex gap-3 text-sm leading-6 text-slate-600"
                                                 >
                                                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
 
                                                     {
-                                                        responsibility
+                                                        responsibility[
+                                                        language
+                                                        ]
                                                     }
                                                 </li>
                                             ),
                                         )}
+
                                     </ul>
+
                                 </div>
 
                             </article>

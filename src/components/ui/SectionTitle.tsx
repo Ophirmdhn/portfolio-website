@@ -11,6 +11,7 @@ export default function SectionTitle({
 }: SectionTitleProps) {
     return (
         <div className="max-w-2xl">
+
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
                 {label}
             </p>
@@ -24,6 +25,7 @@ export default function SectionTitle({
                     {description}
                 </p>
             )}
+
         </div>
     )
 }
