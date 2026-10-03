@@ -97,4 +97,4 @@ export const en = {
         builtWith:
             'Built with React, TypeScript & Tailwind CSS.',
     },
-} as const
+}

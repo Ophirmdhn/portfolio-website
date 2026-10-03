@@ -97,4 +97,4 @@ export const id = {
         builtWith:
             'Dibangun dengan React, TypeScript & Tailwind CSS.',
     },
-} as const
+}

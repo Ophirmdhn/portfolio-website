@@ -7,7 +7,9 @@ import './index.css'
 
 import App from './App'
 
-import { LanguageProvider } from './contexts/LanguageContext'
+import {
+  LanguageProvider,
+} from './contexts/LanguageContext'
 
 const rootElement =
   document.getElementById('root')
